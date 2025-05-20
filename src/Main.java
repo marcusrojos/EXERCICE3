@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 class WordCounter {
     public static void main(String[] args) {
-        // Scanner pour l'entrée utilisateur (ne pas fermer celui-ci !)
+        // Scanner pour l'entrée utilisateur
         Scanner userInput = new Scanner(System.in);
         System.out.println("Entrez le chemin complet du fichier à analyser :");
         String filePath = userInput.nextLine();
 
-        // Utilisation de try-with-resources pour le Scanner du fichier
+        // Utilisation de try catch pour le Scanner du fichier
         try (Scanner fileScanner = new Scanner(new File(filePath))) {
             int totalWords = 0;
 
